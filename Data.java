@@ -1,3 +1,11 @@
+/**
+ * Programa desenvolvido como atividade prática na disciplina Técnicas de Programação I ministrada pelo professor Bosco
+ * DC UFC Fortaleza-CE BR
+ * 12_03_2020
+ * Ualas Lima Damacêno
+ */
+
+
 package br.ufc.dc.tpi.calendario;
 
 public class Data {
@@ -35,7 +43,7 @@ public class Data {
 		}
 	}
 	
-	private int diaDoMes() {
+	private int diasDoMes() {
 		int diasDoMes[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		int result = diasDoMes[mes - 1];
 		if(mes == 2 && isAnoBissexto()) {
@@ -45,6 +53,10 @@ public class Data {
 	}
 	
 	private boolean isAnoBissexto() {
-		return(divide(4, ano) && !(divide(100, ano))
+		return(divide(4, ano) && !(divide(100, ano)));
+	}
+	
+	private boolean divide(int a, int b) {
+		return b % a == 0;
 	}
 }
